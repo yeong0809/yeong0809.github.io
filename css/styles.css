@@ -1,6 +1,5 @@
 body{
     margin: 10%;
-    font-size: 16px;
 }
 .nameheader{
     text-align: center;
@@ -19,12 +18,11 @@ body{
     float: left;
 }
 .content .sectionheader{
-    font-size: 18px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-weight: bold;
 }
 .content .header{
     background-color: #EEF3F3;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: bold;
 }
