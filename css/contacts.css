@@ -1,0 +1,110 @@
+/* Contacts (contacts.css) */
+
+/* Contact area - compact neutral Material chips (two rows) */
+.vitals_header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* Single-line group container */
+.contacts {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+  border-radius: 10px;
+  background: transparent;
+  border: none;
+}
+
+/* Ensure links in contacts are not underlined and inherit color */
+.contacts a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Neutral compact chip */
+.contact_item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(16,24,40,0.03);
+  color: var(--md-on-surface);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.2px;
+  min-height: 36px;
+  transition: transform 120ms ease, box-shadow 140ms ease;
+  position: relative;
+}
+
+/* Remove any decorative dot - keep chips clean */
+.contact_item::before { content: none; }
+
+/* Icon sizing for contact chips */
+.contact_icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.98;
+  transform-origin: center;
+}
+
+/* Links inside chips — professional, no underline */
+.contact_item a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.contact_item a:hover,
+.contact_item a:focus { text-decoration: none; }
+
+/* Accessible focus-visible state */
+.contact_item a:focus-visible {
+  outline: 2px solid rgba(25,118,210,0.14);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Hover: elevation only, neutral (no color tint) */
+.contact_item:hover,
+.contact_item:focus-within {
+  transform: translateY(-3px);
+  box-shadow: var(--elevation-2);
+  background: rgba(16,24,40,0.06);
+  color: var(--md-on-surface);
+}
+
+/* Icon micro-interaction */
+.contact_item:hover .contact_icon {
+  transform: translateY(-1px) scale(1.04);
+  opacity: 1;
+}
+
+/* Text appearance */
+.contact_item .text {
+  color: var(--md-on-surface);
+  font-weight: 600;
+}
+
+/* Subtle separators between chips */
+.contact_item + .contact_item {
+  margin-left: 6px;
+  padding-left: 8px;
+  border-left: 1px solid rgba(16,24,40,0.06);
+}
+
+/* Responsive: stack contacts on small screens */
+@media (max-width: 600px){
+  .contacts { flex-direction: column; gap: 8px; padding: 8px; }
+  .contact_item + .contact_item { border-left: none; margin-left: 0; }
+}

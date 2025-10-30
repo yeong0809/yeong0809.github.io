@@ -1,0 +1,155 @@
+{
+  "name": "Loh Jyh Yeong",
+  "title": "Technology Lead",
+  "contacts": {
+    "phone": "+60129311338",
+    "phone_display": "(+60) 12931 1338",
+    "email": "yeong-0809@hotmail.com",
+    "github": "https://github.com/yeong0809",
+    "github_display": "github.com/yeong0809",
+    "linkedin": "https://www.linkedin.com/in/jyhyeong/",
+    "linkedin_display": "linkedin.com/in/jyhyeong"
+  },
+  "objective": "Seeking a competitive and challenging environment where I can serve your organization and establish an enjoyable career experience for myself.",
+  "skills": {
+    "technical": [
+      "React Native",
+      "Next.js / React.js",
+      "Laravel",
+      "PHP",
+      "Go",
+      "SQL",
+      "Java"
+    ],
+    "cloud_tools_testing": [
+      "AWS Services (EC2, S3, RDS, etc.)",
+      "Git",
+      "Bash scripting",
+      "Jest",
+      "Detox"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Technology Lead",
+      "company": "RoboWealth Sdn Bhd / AutoWealth Pvt Ltd",
+      "location": "Tun Razak Exchange, Kuala Lumpur",
+      "start": "August 2022",
+      "end": "Present",
+      "responsibilities": [
+        "Analyzed project specifications and validated business and technical requirements for both web and mobile applications.",
+        "Designed and documented technical architectures, including system diagrams and external system integrations.",
+        "Led engineering best practices and participated in architecture design reviews to ensure scalable and maintainable solutions.",
+        "Reviewed codebases to identify technical risks, enforce code quality and security standards through Vulnerability Assessment and Penetration Testing (VAPT).",
+        "Fine-tuned deployment processes and managed release cycles for web and mobile platforms.",
+        "Estimated development efforts, evaluated emerging technologies, and proposed improvements to optimize workflows and delivery.",
+        "Participated in disaster recovery planning and executed periodic recovery drills.",
+        "Delivered interim technical solutions to mitigate the impact of unexpected production issues and maintain business continuity.",
+        "Coordinated incident triage and post-incident reviews.",
+        "Provided mentorship and technical support to junior analysts and developers, fostering growth and improving team performance.",
+        "Collaborated daily in Agile stand-ups, aligning development efforts with product and business goals.",
+        "Coordinated with external service providers to scope, translate, and manage delivery of outsourced development efforts."
+      ],
+      "tech_stack": [
+        "Next.js",
+        "React.js",
+        "React Native",
+        "Laravel",
+        "Go",
+        "AWS (EC2, S3, RDS, etc.)"
+      ]
+    },
+    {
+      "title": "Mobile Developer",
+      "company": "CIS IT Solutions Sdn Bhd",
+      "location": "Bangsar South, Kuala Lumpur",
+      "start": "August 2019",
+      "end": "July 2022",
+      "responsibilities": [
+        "Developed and maintained cross-platform mobile applications for iOS and Android using React Native.",
+        "Collaborated with cross-functional teams (designers, backend developers, product managers) to define, design, and deliver new features.",
+        "Integrated with external APIs and third-party data sources to enhance app functionality and user experience.",
+        "Wrote unit tests to ensure code robustness, covering edge cases, usability, and reliability.",
+        "Managed incidents, bug fixes, and change requests to ensure app stability and performance.",
+        "Created and maintained training materials and technical documentation for mobile app functionality and business processes.",
+        "Communicated regularly with stakeholders to provide updates, gather feedback, and align development goals with business priorities.",
+        "Investigated user-reported issues to identify root causes and implemented eﬃcient, long-term solutions.",
+        "Integrated notification management tools and live chat features to improve real-time user engagement and support.",
+        "Conducted server stress testing to evaluate system resilience under high load scenarios.",
+        "Successfully deployed mobile applications to the Google Play Store and Apple App Store, ensuring compliance with platform requirements."
+      ],
+      "tech_stack": [
+        "React Native",
+        "REST APIs",
+        "Firebase Notification",
+        "App Store / Play Store deployment tools"
+      ]
+    },
+    {
+      "title": "Intern / Mobile Analyst",
+      "company": "GHL ePayments Sdn Bhd",
+      "location": "Bandar Sri Damansara, Kuala Lumpur",
+      "start": "Feb 2018",
+      "end": "August 2019",
+      "responsibilities": [
+        "Collaborated closely with business analysts and application designers to define and enhance new features and modules.",
+        "Translated business requirements and concepts into scalable, eﬃcient, and standards-compliant code.",
+        "Built functional prototypes during the technical scoping phase to validate feasibility and approach.",
+        "Developed and maintained front-end solutions for merchant-facing mobile applications using React Native.",
+        "Designed and implemented RESTful API endpoints in PHP for both internal tools and external integrations.",
+        "Conducted continuous research on emerging trends and technologies in mobile development to inform architecture and tooling decisions.",
+        "Authored technical specifications, test guidelines, and detailed documentation to ensure alignment and clarity.",
+        "Delivered Level 3 support, including advanced troubleshooting and root cause analysis for critical issues.",
+        "Communicated regularly with management to provide progress updates, flag obstacles, and propose solutions."
+      ],
+      "tech_stack": [
+        "React Native",
+        "PHP",
+        "REST APIs",
+        "Git",
+        "Postman"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "GHL ePayments",
+      "highlights": [
+        "Developed custom SDKs/plugins (React Native, Cordova, Ionic) to streamline merchant integration, reducing onboarding time and improving developer efficiency.",
+        "Built an internal web platform to optimize the transaction refund process, integrating secure authentication for risk team access.",
+        "Created a merchant-facing mobile app in React Native with real-time sales tracking and data sync across iOS and Android, enhancing operational insight and decision-making."
+      ]
+    },
+    {
+      "title": "CIS IT Solutions",
+      "highlights": [
+        {
+          "text": "Built and deployed multiple React Native e-commerce apps, each tailored for different business models:",
+          "points": [
+            "Tiered commissions, PWP features, and notification systems to boost user engagement and sales.",
+            "Credit Rewards system allowing users to earn and redeem points.",
+            "Education platform with a hierarchical downline view, supporting both online and physical course purchases."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "AutoWealth",
+      "highlights": [
+        "Developed client, agent, and staff-facing platforms using Next.js, improving UX and workflow across both B2C and B2B segments.",
+        "Built the mobile app from scratch using React Native, and continuously enhanced its features to ensure smooth, high-performance functionality across both iOS and Android platforms.",
+        "Created a Laravel back-end supporting business logic, API integrations, and regulatory-compliant features like fund segregation.",
+        "Deployed web and back-end on AWS and on-premise bank servers, with secure LDAP integration and support for legacy (EOL) environments."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universiti Malaysia Pahang",
+      "level": "Bachelor Degree of Computer Science in Software Engineering with Honors"
+    }
+  ],
+  "meta": {
+    "lastUpdated": "30 October 2025"
+  }
+}

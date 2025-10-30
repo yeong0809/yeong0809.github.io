@@ -1,0 +1,38 @@
+/* Skills (skills.css) - horizontal chip groups and spacing */
+
+/* Skills: horizontal chip groups */
+.skills .header {
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 10px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+.skills ul li {
+  background: rgba(16,24,40,0.03);
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(16,24,40,0.04);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--md-on-surface);
+  margin: 0;
+}
+
+/* Extra vertical gap between the two skill subsections (Technical and Cloud, Tools & Testing) */
+.skills ul + .header {
+  margin-top: 20px;
+}
+
+/* Small responsive tweaks */
+@media (max-width: 900px) {
+  .skills ul { gap: 6px; }
+}
+@media (max-width: 600px){
+  .skills ul { flex-direction: column; gap: 8px; }
+}

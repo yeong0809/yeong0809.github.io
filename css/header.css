@@ -1,0 +1,61 @@
+/* Header & typography styles (header.css) */
+
+/* Site header container */
+.site_header {
+  margin-bottom: 8px;
+}
+
+/* Name block */
+.name_header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+.name_header h1{
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 2.0rem;
+  color: var(--md-on-surface);
+}
+.name_header .subtitle{
+  margin: 0;
+  color: var(--md-muted);
+  font-weight: 500;
+  font-size: 0.975rem;
+}
+
+/* Section header styles used across the page */
+.section_header{
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--md-primary);
+  font-weight: 700;
+}
+
+/* Headings inside content blocks */
+.header{
+  margin: 10px 0 6px;
+  font-weight: 700;
+  color: var(--md-on-surface);
+  font-size: 1.02rem;
+}
+.subheader{
+  margin: 0 0 8px;
+  color: var(--md-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.site_footer {
+  text-align: center;
+  color: var(--md-muted);
+  font-size: 0.9rem;
+  margin-top: 24px;
+  padding-bottom: 20px;
+}

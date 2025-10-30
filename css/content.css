@@ -1,0 +1,223 @@
+/* Content (content.css) - general content blocks, cards, lists */
+
+/* Content cards */
+.content_block{
+  background: var(--md-surface);
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: var(--elevation-1);
+  border: 1px solid rgba(16,24,40,0.03);
+  margin-bottom: 0;
+}
+
+/* Lists default styling inside content blocks (support nested lists) */
+.content_block ul {
+  margin: 6px 0 0 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+.content_block li {
+  margin: 0 0 0 0;
+  color: var(--md-on-surface);
+  font-size: 0.95rem;
+}
+
+/* Nested list styles: second-level lists use circle, third-level use square */
+.content_block ul ul {
+  list-style: circle;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  padding-left: 1rem;
+}
+
+.content_block ul ul ul {
+  list-style: square;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  padding-left: 1rem;
+}
+
+/* Slight spacing for list items to improve readability */
+.content_block ul li {
+  margin: 0.25rem 0;
+}
+
+/* Utilities for smaller screens */
+@media (max-width: 600px){
+  .content_block { padding: 14px; }
+}
+
+
+/* -------------------------
+   Scroll snap & layout rules
+   -------------------------
+   Behavior:
+   - The main `.content` area becomes a vertical scroll container with snap points.
+   - Each vertical section (.objective, .skills, .education) snaps to the viewport.
+   - The `.experience` and `.projects` sections are horizontal carousels with x-axis snapping,
+     where each child card (article / .role) snaps into view.
+   - On small screens the horizontal carousels collapse to a vertical flow.
+*/
+
+/* Use browser scroll for vertical navigation; enable vertical snap on body.
+   Keep a stable CSS grid on the body (single column by default) so toggling
+   the two-column state doesn't change `display` and cause layout thrash/flicker.
+*/
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 24px;
+  align-items: start;
+
+  /* snapping removed: rely on standard browser scrolling */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  min-height: 100%;
+}
+
+/* Content is a vertical stack with smaller gaps between sections */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Make each block a snap point and visually large enough to act like a "page" */
+.content_block {
+  /* use content-driven height instead of forcing full viewport */
+  min-height: auto;
+  height: auto;
+  margin-bottom: 0; /* spacing handled by .content gap */
+  display: block;
+  padding: 20px 16px;
+  box-sizing: border-box;
+}
+
+/* Make Experience and Projects vertical stacks (no horizontal scrolling) */
+.experience,
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: visible;
+}
+
+/* Vertical child cards — full width, stacked with gaps */
+.experience .role,
+.projects article {
+  flex: none;
+  width: 100%;
+  align-self: stretch;
+  min-height: auto;
+  background: var(--md-surface);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: var(--elevation-1);
+  border: 1px solid rgba(16,24,40,0.03);
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+/* Ensure internal lists inside horizontal cards are scrollable if long */
+.experience .role ul,
+.projects article ul {
+  max-height: none;
+  overflow: visible;
+}
+
+/* Small scrollbar styling for usability — horizontal containers only */
+.experience::-webkit-scrollbar,
+.projects::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+.experience::-webkit-scrollbar-thumb,
+.projects::-webkit-scrollbar-thumb {
+  background: rgba(16,24,40,0.12);
+  border-radius: 6px;
+}
+
+/* Accessibility: keyboard focus outlines for snap cards */
+.experience .role:focus,
+.projects article:focus,
+.content_block:focus {
+  outline: 3px solid rgba(25,118,210,0.18);
+  outline-offset: 4px;
+}
+
+/* Responsive: collapse horizontal carousels into a vertical flow on small screens */
+@media (max-width: 900px) {
+  .experience,
+  .projects {
+    flex-direction: column;
+    overflow-x: visible;
+    overflow-y: visible;
+    gap: 12px;
+  }
+
+  .experience .role,
+  .projects article {
+    flex: none;
+    min-width: auto;
+    min-height: auto;
+    width: 100%;
+  }
+
+  /* Allow page to flow normally on narrow devices */
+  body {
+    scroll-snap-type: none;
+  }
+  .content {
+    height: auto;
+    overflow: visible;
+  }
+}
+
+/* Header sizing — make personal info and contacts take available width,
+   remove extra spacing, and provide responsive stacking for small screens */
+.site_header {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 12px;
+  margin-bottom: 0;
+}
+
+.name_header,
+.vitals_header {
+  flex: 1 1 auto;
+  margin: 0;
+}
+
+.name_header { padding-right: 8px; }
+.vitals_header {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* On smaller screens stack header content */
+@media (max-width: 700px) {
+  .site_header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 0;
+  }
+  .vitals_header { justify-content: flex-start; }
+}
+
+/* Two-column layout for larger viewports
+   - Left column shows personal info / contacts (site_header) and is sticky.
+   - Right column shows the main content sections (Objective, Skills, Experience, Projects, Education).
+   - Footer spans both columns.
+*/
+/* Two-column layout removed — page will stay single-column.
+   Previous two-column overlay/shift CSS has been removed per request.
+*/

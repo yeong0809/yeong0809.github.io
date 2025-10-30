@@ -1,0 +1,69 @@
+/* Base CSS — variables, resets, layout wrapper */
+
+/* Palette & tokens */
+:root {
+  --md-bg: #f5f7fb;
+  --md-surface: #ffffff;
+  --md-on-surface: #111827;
+  --md-muted: #6b7280;
+
+  --md-primary: #1976d2;
+  --md-primary-variant: #115293;
+  --md-secondary: #7c4dff;
+  --md-tertiary: #00bfa5;
+
+  --md-error: #b00020;
+
+  --elevation-1: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.04);
+  --elevation-2: 0 3px 6px rgba(16, 24, 40, 0.08), 0 1px 2px rgba(16, 24, 40, 0.04);
+  --elevation-3: 0 6px 18px rgba(16, 24, 40, 0.12), 0 2px 4px rgba(16, 24, 40, 0.06);
+}
+
+/* Reset / base */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--md-bg);
+  color: var(--md-on-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* Layout wrapper */
+.site_header,
+.content,
+.site_footer {
+  max-width: 880px;
+  margin: 28px auto;
+  padding: 0 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Utility elevation */
+.elevation-1 {
+  box-shadow: var(--elevation-1);
+}
+
+.elevation-2 {
+  box-shadow: var(--elevation-2);
+}
+
+.elevation-3 {
+  box-shadow: var(--elevation-3);
+}
